@@ -5,8 +5,6 @@ Created on Sun Apr  5 23:43:37 2020
 @author: thch1015
 """
 
-import os
-import pandas as pd
 import serial
 import serial.tools.list_ports
 import toolsCT as tools
