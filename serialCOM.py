@@ -5,8 +5,6 @@ Created on Sun Apr  5 23:43:37 2020
 @author: thch1015
 """
 
-import os
-import pandas as pd
 import serial
 import serial.tools.list_ports
 import toolsCT as tools
@@ -20,7 +18,7 @@ def prepare_connection(master=False):
     infomessage_2 = 'Bitte resetten Sie den Controller\n' \
                     'und starten Sie das Programm neu!\n' \
                     'Falls das Problem weiterhin besteht,\n' \
-                    'ist möglicherweise der PSoC defekt oder so.'
+                    'ist möglicherweise der PSoC defekt.'
     TIMEOUT = False
     timeoutCounter = 0
     while True:
