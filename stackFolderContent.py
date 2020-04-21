@@ -18,7 +18,7 @@ import dbTools as db
 
 # pathDataOut = r'D:\Benutzer\thch1015\nextcloud\HSKA\Hiwi\HiWiWS1920\Projekte\AuswertungenZoo\Elefanten\tar_2020\acc_gyro\b03'
 # pathDataOut = r'D:\Benutzer\thch1015\nextcloud\HSKA\Hiwi\HiWiWS1920\Projekte\AuswertungenZoo\Elefanten\tar_2020\battery\b03'
-pathDataOut = r'E:\nextcloud\HSKA\Hiwi\HiWiWS1920\Projekte\AuswertungenZoo\Flamingos\Daten_2019_Flamingos\acc_gyro\ece4'
+pathDataOut = r'D:\Benutzer\thch1015\nextcloud\HSKA\Hiwi\Projekte\AuswertungenZoo\Exotenhaus\SkripteDaten\181920'
 
 # saveName = 'ece4temp.dat'
 # saveName = '06c6temp.dat'
@@ -26,7 +26,7 @@ pathDataOut = r'E:\nextcloud\HSKA\Hiwi\HiWiWS1920\Projekte\AuswertungenZoo\Flami
 # saveName = '7c83temp.dat'
 # saveName = 'fb86temp.dat'
 
-saveName = 'ece4acc.dat'
+saveName = 'exo181920.dat'
 # saveName = '06c6acc.dat'
 # saveName = '6985acc.dat'
 # saveName = '7c83acc.dat'
@@ -34,7 +34,6 @@ saveName = 'ece4acc.dat'
 
 # prüfe ob sich Dateteien im "Postausgangsordner" befinden
 dataOutContent = os.listdir(pathDataOut)
-# falls ja, gib mir die Namen aller .tar.gz mit entsprechendem Präfix als Liste
 if len(dataOutContent) > 0:
     dataList = []
     # erzeuge nun Liste aller .dat mit entsprechendem Präfix

@@ -282,7 +282,7 @@ class Exo2FrameCSVP(Data2FrameCSVP):
                            fileList als ['/Pfad/zur/Datei/fileName1', '..']
                            Delimiter als 'Trennzeichen'
                            HeaderF als Index für die Headerzeile falls fileName
-                           HeaderL als Index für die Headerzeile fall fileList
+                           HeaderL als Index für die Headerzeile falls fileList
         '''
         fileList_c = copy.deepcopy(fileList)
         if fileName is None:
