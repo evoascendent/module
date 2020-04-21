@@ -81,8 +81,6 @@ def prepare_connection(master=False):
 
 
 class InterfacePsocSlave:
-    """
-    """
     def __init__(self, port=None, baudrate=115200):
         self.session = serial.Serial(port, baudrate)
 
@@ -118,9 +116,6 @@ class InterfacePsocSlave:
 
 
 class InterfacePsocMaster:
-    """
-    Noch nicht fertig...
-    """
     def __init__(self, port=None, baudrate=115200):
         self.session = serial.Serial(port, baudrate)
 
