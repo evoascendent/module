@@ -9,6 +9,7 @@ import serial
 import serial.tools.list_ports
 import toolsCT as tools
 import platform
+import numpy as np
 
 
 def prepare_connection(master=False):
@@ -102,7 +103,7 @@ class InterfacePsocSlave:
         except:
             print("Kabelverbindung prüfen!")
 
-    def receive(self):
+    def receiveString(self):
         received = self.session.readline()
         received = received.decode()
         return received
@@ -110,9 +111,21 @@ class InterfacePsocSlave:
     def getUart(self):
         self.open_port()
         self.transmit()
-        dataString = self.receive()
-        self.close_port()  # führt möglicherweise zur Blockade im PSoC
+        dataString = self.receiveString()
+        self.close_port()
         return dataString
+
+    def receiveBytes(self, count, datatype):
+        received = self.session.read(count)
+        received = np.frombuffer(received, dtype=datatype)
+        return received
+
+    def getUartBytes(self, count, datatype):
+        self.open_port()
+        self.transmit()
+        dataArray = self.receiveBytes(count, datatype)
+        self.close_port()
+        return dataArray
 
 
 class InterfacePsocMaster:
